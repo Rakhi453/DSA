@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+  // write your code here 
+  Scanner scn= new Scanner(System.in);
+  int num= scn.nextInt();
+  int pos=1; int sum=0;
+  while(num!=0){
+    int dig= num%10;
+    int v1= pos* (int)Math.pow(10, dig-1);
+    sum+= v1;
+
+    pos++;
+    num= num/10;
+  }
+  System.out.println(sum);
+
+
+ }
+}
