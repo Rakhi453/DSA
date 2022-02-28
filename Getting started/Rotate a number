@@ -1,0 +1,30 @@
+import java.util.*;
+   
+   public class Main{
+   
+   public static void main(String[] args) {
+     // write your code here  
+     Scanner scn= new Scanner(System.in);
+     int num= scn.nextInt();
+     int n= num;
+     int k= scn.nextInt();
+     int count=0;
+     while(n!=0){
+       n=n/10;
+       count++;
+     }
+     k= k%count;
+     if(k<0){
+       k=k+count;
+     }
+     
+     int temp1= (int)Math.pow(10,k);
+     int p1= num%temp1;
+     int p2= num/temp1;
+
+     int temp2= (int)Math.pow(10, count-k);
+     int ans= p1*temp2+p2;
+     System.out.println(ans);
+
+    }
+   }
