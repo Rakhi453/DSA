@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int n= scn.nextInt();
+        int row=1; 
+        int num=1;
+        int nsp=(n/2); 
+        int nstr=1;
+        
+        while(row<=n){
+        for(int i=1; i<=nsp; i++){
+            System.out.print("\t");
+        }int temp=num;
+        for (int i=1; i<= nstr; i++){
+            if(i<=nstr/2){
+            System.out.print(temp+"\t");
+            temp++;
+            }else{
+                System.out.print(temp+"\t");
+                temp--;
+            }
+           
+            
+        }
+        System.out.println();
+        if(row<=n/2){
+            nsp= nsp-1;
+            nstr= nstr+2;
+            num++;
+        }else{
+            nsp= nsp+1;
+            nstr= nstr-2;
+            num--;
+        }
+        row++;
+        }
+
+    }
+}
