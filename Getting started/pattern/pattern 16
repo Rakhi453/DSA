@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+
+     // write ur code here
+     int n= scn.nextInt();
+     int row= 1; 
+     int nstr=1; 
+     int nsp=2*n-3;
+     while(row<=n){
+         int val = 1;
+     for(int i=1; i<=nstr; i++){
+         System.out.print(val+"\t");
+         val++;
+     }
+     for(int i=1; i<=nsp; i++){
+            System.out.print("\t");
+        }
+        if(row==n){
+            nstr=nstr-1;
+        }
+        int v2= nstr;
+     for(int i=1; i<=nstr; i++){
+         
+         System.out.print(v2+"\t");
+         v2--;
+     }System.out.println();
+     row++;
+     nstr= nstr+1;
+     nsp=nsp-2;
+    }
+ }
+}
