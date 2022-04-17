@@ -1,0 +1,42 @@
+import java.util.*;
+  
+  public class Main{
+
+  public static int getValueIndecimal(int n, int sb){
+      // write your code here
+      int valindec=0,mul=0;
+      while(n !=0){
+         int rem= n%10;
+         n=n/10;
+         valindec= valindec+rem*(int)Math.pow(sb,mul);
+         mul++;
+
+      }
+      return valindec;
+   }
+   public static int getValueInBase(int n, int b){
+       // write code here
+       int ans=0, mul=1;
+       while(n !=0){
+           
+           int rem=n%b;
+           n=n/b;
+           ans=ans+rem*mul;
+           mul=mul*10;
+
+       }
+       return ans;
+   }
+  public static void main(String[] args) {
+      Scanner scn = new Scanner(System.in);
+      int n = scn.nextInt();
+      int sb = scn.nextInt();
+     int  db= scn.nextInt();
+     int valindec=getValueIndecimal(n,sb);
+     int resbasevalue=getValueInBase(valindec,db);
+     System.out.println(resbasevalue);
+
+  } 
+  
+
+  }
