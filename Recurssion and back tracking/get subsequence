@@ -16,7 +16,7 @@ public class Main {
         if(s.length() == 0){
             //ArrayList<type> name = new ArrayList<type>();
             ArrayList<String> base= new ArrayList<String>();
-            base.add=("");
+            base.add("");
             return base;
 
         }
